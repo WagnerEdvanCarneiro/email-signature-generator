@@ -1,0 +1,5 @@
+{
+  "name": "Email Signature Generator",
+  "description": "A tool to generate and customize email signatures based on a specific template.",
+  "requestFramePermissions": []
+}
