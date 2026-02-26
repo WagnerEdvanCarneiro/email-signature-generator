@@ -79,7 +79,7 @@ export default function App() {
 
   // Helper to generate colored SVG icons as Data URIs
   const getIcon = (type: 'phone' | 'mail' | 'globe', color: string) => {
-    const colorHex = color; 
+    const colorHex = color;
     let path = '';
     if (type === 'phone') path = '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>';
     if (type === 'mail') path = '<rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>';
@@ -161,11 +161,11 @@ export default function App() {
   const exportPng = async () => {
     if (previewRef.current) {
       try {
-        const dataUrl = await toPng(previewRef.current, { 
-          width: 500, 
+        const dataUrl = await toPng(previewRef.current, {
+          width: 500,
           height: 180,
-          backgroundColor: '#ffffff', 
-          pixelRatio: 2 
+          backgroundColor: '#ffffff',
+          pixelRatio: 2
         });
         const link = document.createElement('a');
         link.download = 'assinatura-vetorial.png';
@@ -182,7 +182,7 @@ export default function App() {
       <div className="max-w-6xl mx-auto">
         <header className="mb-10 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-2">
-            Gerador de assinatura de e-mail Vetorial
+            Gerador de Assinatura de E-mail Vetorial
           </h1>
           <p className="text-slate-500 text-lg">
             Crie e exporte sua assinatura personalizada | Powered by Wagner Carneiro
@@ -383,18 +383,18 @@ export default function App() {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="p-8 md:p-12 overflow-x-auto bg-white flex justify-center items-center min-h-[300px]">
                   {/* This wrapper is what gets exported */}
-                  <div 
-                    ref={previewRef} 
+                  <div
+                    ref={previewRef}
                     style={{ width: '500px', height: '180px', backgroundColor: 'white' }}
                     className="flex items-center p-6 box-border shadow-sm border border-slate-100"
                   >
                     <div style={{ width: '100%' }} dangerouslySetInnerHTML={{ __html: generateHtml() }} />
                   </div>
                 </div>
-                
+
                 <div className="bg-slate-50 px-6 py-4 border-t border-slate-200">
                   <p className="text-xs text-slate-500 text-center">
                     Instruções: Clique em "Exportar PNG" para baixar a imagem da sua assinatura.
