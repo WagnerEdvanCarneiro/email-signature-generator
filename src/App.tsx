@@ -177,7 +177,7 @@ export default function App() {
         width: 400,
         height: 140,
         backgroundColor: '#ffffff',
-        pixelRatio: 2
+        pixelRatio: 2.5
       });
       const link = document.createElement('a');
       link.download = 'assinatura-vetorial.png';
